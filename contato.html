@@ -23,26 +23,28 @@
             
             <form>
                 <label for="nome">Nome:</label> <br>
-                <input type="text" id="nome">
-                <br>
+                <input type="text" id="nome" onkeyup='validarNome()'>
+                <div id='txtNome'></div>
                 <br>
                 <label for="email">E-mail:</label> <br>
-                <input type="email" id="email">
+                <input type="email" id="email" onkeyup='validarEmail()'>
+                <div id='txtEmail'></div>
                 <br>
-                <br>
-                <label for="numero celular">Nº Celular:</label> <br>
-                <input type="number" id="numero celular">
-                <br>
+                <label for="numero-celular">Nº Celular:</label> <br>
+                <input type="del" min="1" max="11" onKeyDown='validarNumeroCelular()'
+                id="numero-celular">
+                <div id='txtNumeroCelular'></div>
                 <br>
                 <label for="assunto">Assunto:</label> <br>
-                <textarea name="assunto" id="assunto" cols="60" rows="10"></textarea>
+                <textarea name="assunto" id="assunto" cols="60" rows="10" onkeyup='validarAssunto()'></textarea>
+                <div id='txtAssunto'></div>
                 <br>
                 <br>
-                <button>Enviar</button>
-                </form>
+                <button onclick="enviar()">Enviar</button>
+            </form>
         </div>
 
-        <div class="ml-50">
+    <div class="ml-50">
             <h2>Endereço</h2>
 
             <p> Shopping Cidade Jardim - Avenida Magalhães de Castro - Morumbi,</p>
@@ -54,7 +56,7 @@
             1!3m3!1m2!1s0x94ce573067c09ec1%3A0x19bcf8b4485c7402!2sCasa%20Bossa%20-%20Shopping%
             20Cidade%20Jardim!5e0!3m2!1spt-BR!2sbr!4v1603314993118!5m2!1spt-BR!2sbr" 
             width="450" height="300" frameborder="0" style="border:0;" 
-            allowfullscreen="" aria-hidden="false" tabindex="0">
+            allowfullscreen="" aria-hidden="false" tabindex="0" onmousemove="mapazoom()" onmouseout="mapapadrao()" id="mapa">
             </iframe>
         </div>
     </div>
@@ -84,9 +86,7 @@
         </p>
     </footer>
 
+    <script src="acessos/js/script.js"></script>
 
-    
-
-        
 </body>
 </html>
